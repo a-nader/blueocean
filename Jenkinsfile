@@ -19,7 +19,7 @@ pipeline {
 
     stage('Security Scan') {
       steps {
-  
+		sh 'echo "ignoring security scan"'
       }
     }
 
