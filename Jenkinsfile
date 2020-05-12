@@ -19,7 +19,7 @@ pipeline {
 
     stage('Security Scan') {
       steps {
-		sh 'echo "ignoring security scan"'
+        aquaMicroscanner(imageName: 'alpine:latest', notCompliesCmd: 'exit 1', onDisallowed: 'fail')
       }
     }
 
